@@ -23,12 +23,11 @@ public class ProductController {
 	@Autowired private ProductService productService;
 	@Autowired private CategoryService categoryService;
 	
-	@GetMapping(value = {"/", "/admin"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@GetMapping(value = {"/admin/products", "/admin"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ModelAndView display(Model model) {
 		model.addAttribute(SystemConstant.PRODUCTS, productService.findAll());
 		model.addAttribute(SystemConstant.CATEGORIES, categoryService.findAll());
 		model.addAttribute("count", productService.count());
-		model.addAttribute("account", SystemConstant.ACCOUNT);
 		return new ModelAndView("admin/product/display");
 	}
 	

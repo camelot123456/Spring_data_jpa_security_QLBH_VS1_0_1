@@ -28,17 +28,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		// TODO Auto-generated method stub
 		http.csrf().disable();
 		
-		http.authorizeRequests().antMatchers("/login", "/logout").permitAll();
+		http.authorizeRequests().antMatchers("/", "/home","/login", "/logout").permitAll();
 		
-		http.authorizeRequests().antMatchers("/","/admin/*").access("hasAnyRole('ROLE_ADMIN')");
+		http.authorizeRequests().antMatchers("/admin/**").access("hasAnyRole('ROLE_ADMIN')");
 		
 		http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/404");
 		
 		http.authorizeRequests().and().formLogin()
 		.loginPage("/login").usernameParameter("username").passwordParameter("password")
 		.loginProcessingUrl("/handler_security_authorizi")
-		.defaultSuccessUrl("/").failureUrl("/login?error=True")
-		.and().logout().logoutUrl("/logout").logoutSuccessUrl("/login");
+		.defaultSuccessUrl("/handler-login-success").failureUrl("/login?error=True")
+		.and().logout().logoutUrl("/logout").logoutSuccessUrl("/handler-logout");
 	}
 	//https://mainul35.medium.com/spring-security-demonstrating-custom-authentication-success-handler-3b6fcb572a53
 	

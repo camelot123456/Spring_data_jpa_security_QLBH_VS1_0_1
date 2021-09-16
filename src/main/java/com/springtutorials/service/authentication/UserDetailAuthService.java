@@ -38,9 +38,10 @@ public class UserDetailAuthService implements UserDetailsService {
 			authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getCode()));
 		}
 		
-		SystemConstant.ACCOUNT = account;
-		
 		UserDetails userDetails = new User(account.getUsername(), account.getPassword(), authorities);
+		
+		SystemConstant.acconut = account;
+		
 		return userDetails;
 	}
 

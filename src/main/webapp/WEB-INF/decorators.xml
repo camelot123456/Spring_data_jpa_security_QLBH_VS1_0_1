@@ -4,5 +4,6 @@
         <pattern>/</pattern>
         <pattern>/admin/*</pattern>
         <pattern>/login*</pattern>
+        <pattern>/home/*</pattern>
     </decorator>
 </decorators>

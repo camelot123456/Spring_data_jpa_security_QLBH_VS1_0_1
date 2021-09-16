@@ -12,11 +12,18 @@
 				  	<div class="row my-3">
 					  	<img src="http://lh3.googleusercontent.com/7rADIIAXkEedoq9sf6SO4ZiBXkpu-XQCJBxratH4Ij4D1LxH4NbvcdRPLmjdsxfG662h" class="rounded mx-auto d-block _image" alt="">
 				  	</div>
+				  	
+				  	<div class="row mt-4">
+				  		<div>
+				  			
+				  		</div>
+				  	</div>
+				  	
 				  	<div class="row my-3">
-					  	<!-- <div class="mb-3">
-						    <input type="file" name="image" class="form-control" aria-label="file example" required>
+					  	<div class="mb-3" hidden>
+						    <input type="file" name="image" class="form-control" id="image-file" aria-label="file example" required>
 						    <div class="invalid-feedback">Example invalid form file feedback</div>
-						</div> -->
+						</div>
 						<div class="mb-3">
 							<label for="image" class="form-label">Ảnh sản phẩm</label>
 						    <input type="text" class="form-control" name="image" id="image" required>

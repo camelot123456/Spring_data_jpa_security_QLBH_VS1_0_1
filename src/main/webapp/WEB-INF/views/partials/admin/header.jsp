@@ -49,18 +49,29 @@
         	<li class="nav-item">
 	        	<a class="nav-link" href="#">Xin chào, ${account.fullname}</a>
 	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            <img class="rounded-circle" style="width: 40px" alt="${account.fullname}" src="${account.image}">
+	          </a>
+	          <ul class="dropdown-menu  dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+	            <li><a class="dropdown-item" href="#">Hồ sơ cá nhân</a></li>
+	            <li><a class="dropdown-item" href="#">Blog của tôi</a></li>
+	            <li><hr class="dropdown-divider"></li>
+	            <li><a class="dropdown-item" href="#">Tin tức nhà hàng</a></li>
+	            <li><a class="dropdown-item position-relative" href="/admin/chat">
+	            	Tin nhắn khách hàng
+					<span class="badge rounded-pill bg-danger">
+					    99+
+					    <span class="visually-hidden">unread messages</span>
+					</span>            	
+	            </a></li>
+	            <li><a class="dropdown-item" href="#">Bình luận khách hàng</a></li>
+	            <li><hr class="dropdown-divider"></li>
+	            <li><a class="dropdown-item" href="/logout">Đăng xuất</a></li>
+	          </ul>
+	        </li> 
         </c:if>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="rounded-circle" style="width: 40px" alt="${account.fullname}" src="${account.image}">
-          </a>
-          <ul class="dropdown-menu  dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Hồ sơ cá nhân</a></li>
-            <li><a class="dropdown-item" href="#">Blog của tôi</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/logout">Đăng xuất</a></li>
-          </ul>
-        </li>
+       
       </ul>
      
     </div>
